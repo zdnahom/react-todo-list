@@ -15,7 +15,7 @@ export default TodoItem;
 
 TodoItem.propTypes = {
   itemProp: Proptypes.shape({
-    id: Proptypes.number.isRequired,
+    id: Proptypes.string.isRequired,
     title: Proptypes.string.isRequired,
     completed: Proptypes.bool.isRequired,
   }).isRequired,
