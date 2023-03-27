@@ -6,17 +6,17 @@ import { v4 as uuidv4 } from 'uuid';
 const TodosLogic = () => {
   const [todos, setTodos] = useState([
     {
-      id: "1",
+      id: '1',
       title: 'Setup development environment',
       completed: true,
     },
     {
-      id: "2",
+      id: '2',
       title: 'Develop website and add content',
       completed: false,
     },
     {
-      id: "3",
+      id: '3',
       title: 'Deploy to live server',
       completed: false,
     },
