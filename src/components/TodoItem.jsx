@@ -1,6 +1,15 @@
 import Proptypes from 'prop-types';
 
-const TodoItem = ({ itemProp }) => <li key={itemProp.id}>{itemProp.title}</li>;
+const TodoItem = ({ itemProp, handleChange }) => (
+  <li>
+    <input
+      type="checkbox"
+      checked={itemProp.completed}
+      onChange={() => handleChange(itemProp.id)}
+    />
+    {itemProp.title}
+  </li>
+);
 export default TodoItem;
 
 TodoItem.propTypes = {
@@ -9,4 +18,5 @@ TodoItem.propTypes = {
     title: Proptypes.string.isRequired,
     completed: Proptypes.bool.isRequired,
   }).isRequired,
+  handleChange: Proptypes.func.isRequired,
 };
